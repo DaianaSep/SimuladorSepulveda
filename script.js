@@ -47,7 +47,6 @@ const calcularIMC = (peso = 0, altura = 0) => (peso / Math.pow(altura / 100, 2))
 function resultadoImc(genero, peso, altura) {
     switch (genero) {
         case "h":
-
             calculoImc = calcularIMC(peso, altura)
 
             if (calculoImc <= 20) {
@@ -66,8 +65,8 @@ function resultadoImc(genero, peso, altura) {
                 alert(`Hola ${nombre}! Tu IMC es: ${calculoImc.toFixed(2)} - Interpretación: Obesidad muy severa`)
             }
             break
+            
         case "m":
-
             calculoImc = calcularIMC(peso, altura)
 
             if (calculoImc <= 20) {
@@ -98,13 +97,11 @@ function resultadoTmb(genero = "", peso = 0, altura = 0, edad = 0) {
 
     switch (genero) {
         case "h":
-
             calculoTmbH = ((10 * peso) + (6.25 * altura) + (5 * edad) + 5)
             alert(`Hola ${nombre}! El número de calorías que necesitas por día para estar saludable es: ${calculoTmbH.toFixed(0)} `)
             break
 
         case "m":
-
             calculoTmbM = ((10 * peso) + (6.25 * altura) + (5 * edad) - 161)
             alert(`Hola ${nombre}! El número de calorías que necesitas por día para estar saludable es: ${calculoTmbM.toFixed(0)} `)
             break
